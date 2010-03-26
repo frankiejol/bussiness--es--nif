@@ -1,40 +1,54 @@
-Business-ES-NIF version 0.01
-============================
+NAME
+    Business::ES::NIF - Validate Spanish NIF ( Número de Identificación
+    Fiscal )
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+INSTALATION
+    INSTALLATION
 
-A README file is required for CPAN modules since CPAN extracts the
-README file from a module distribution so that people browsing the
-archive can use it get an idea of the modules uses. It is usually a
-good idea to provide version information here so that people can
-decide whether fixes for the module are worth downloading.
+    To install this module type the following:
 
-INSTALLATION
-
-To install this module type the following:
-
-   perl Makefile.PL
-   make
-   make test
-   make install
+       perl Makefile.PL
+       make
+       make test
+       make install
 
 DEPENDENCIES
+    None
 
-This module requires these other modules and libraries:
+SYNOPSIS
+      use Business::ES::NIF;
 
-  blah blah blah
+      if (valid_nif($nif)) {
+        ...
+      }
 
-COPYRIGHT AND LICENCE
+      print code_nif($dni); # return code character from dni.
+                            # Documento Nacional de Identidad
 
-Put the correct copyright and licence information here.
+DESCRIPTION
+    Validates a nif or returns the character code from a dni.
 
-Copyright (C) 2010 by Francesc Guasch
+FUNCTIONS
+  valid_nif
+    Validates Spanish NIFs. Returns a true value if the validation succeeds,
+    a false one otherwise.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.10.1 or,
-at your option, any later version of Perl 5 you may have available.
+      if (valid_nif($nif)) {
+        ....
+      }
 
+  code_nif
+    Returns NIF code from DNI number. ( Documento Nacional de Identidad ).
+
+      my $code = code_nif($dni);
+
+AUTHOR
+    Francesc Guasch, <frankie@etsetb.upc.edu>
+
+COPYRIGHT AND LICENSE
+    Copyright (C) 2010 by Francesc Guasch
+
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself, either Perl version 5.10.1 or, at
+    your option, any later version of Perl 5 you may have available.
 

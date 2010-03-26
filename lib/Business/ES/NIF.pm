@@ -43,7 +43,28 @@ my $DIVISOR = 23;
 
 Business::ES::NIF - Validate Spanish NIF ( Número de Identificación Fiscal )
 
+=begin readme
+
+=head1 INSTALATION
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+=head1 DEPENDENCIES
+
+
+None
+
+=end readme
+
 =head1 SYNOPSIS
+
 
   use Business::ES::NIF;
 
@@ -56,9 +77,11 @@ Business::ES::NIF - Validate Spanish NIF ( Número de Identificación Fiscal )
 
 =head1 DESCRIPTION
 
+
 Validates a nif or returns the character code from a dni.
 
 =head1 FUNCTIONS
+
 
 =head2 valid_nif
 

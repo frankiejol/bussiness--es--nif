@@ -1,0 +1,2 @@
+README: lib/Business/ES/NIF.pm
+	perl -MPod::Readme -e 'my $$parser = Pod::Readme->new() ; $$parser->parse_from_file("lib/Business/ES/NIF.pm","README");'
